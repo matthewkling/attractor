@@ -1,14 +1,10 @@
 
 
-
-
-###########
-
 library(doParallel)
 library(tidyverse)
 
 
-for(i in 3:25){
+for(i in 1:10){
       
       message(i)
       
@@ -108,7 +104,7 @@ for(i in 3:25){
                   plot.background=element_rect(fill="black", color="black"),
                   legend.position="none")
       
-      ggsave(paste0("e:/attractor/y_",i,".png"), p, 
+      ggsave(paste0("e:/attractor/v",i,".png"), p, 
              width=5*length(unique(d$a)), height=5*length(unique(d$e)), 
              limitsize=F)
 }
